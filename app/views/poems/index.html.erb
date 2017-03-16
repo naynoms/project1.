@@ -1,0 +1,16 @@
+<h2>Poems</h2>
+
+<% if @current_user.present? %>
+  <%= link_to 'NEW POEM', new_poem_path %>
+<% else %>
+  <p>
+    <%= link_to 'SIGN IN', login_path %> or
+    <%= link_to 'SIGN UP',  new_user_path %> to add poems
+  </p>
+  <% end %>
+
+<% @poems.each do |poem| %>
+  <p><%= poem.title %><br>
+  <%= poem.content %></p>
+  <div><%= link_to 'SHOW', poem_path(poem.id) %></div>
+<% end %>

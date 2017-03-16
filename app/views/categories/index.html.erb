@@ -1,0 +1,9 @@
+<h2>Categories</h2>
+
+<!-- <%= link_to 'NEW POEM', new_poem_path %> -->
+
+<% @categories.each do |cat| %>
+  <p><%= cat.name %><br>
+  <%= cat.description %></p>
+  <div><%= link_to 'SHOW', category_path(cat.id) %></div>
+<% end %>
