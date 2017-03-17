@@ -6,7 +6,9 @@ end
 
 def my_poems
   @poems = @current_user.poems
-  render :index
+  @poem = Poem.new
+  # render :my_poems
+  @favourites = @current_user.favourites
 end
 
 def new

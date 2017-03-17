@@ -1,0 +1,33 @@
+<div class="mypoems">
+
+
+<div class="poemColumn">
+  <h3>My Creations</h3>
+  <% @poems.each do |poem| %>
+    <div class="inspiration">
+      <p><%= poem.title %><br>
+      <%= poem.content %></p>
+      <div><%= link_to 'SHOW', poem_path(poem.id) %></div>
+    </div>
+  <% end %>
+</div>
+
+<div class="poemForm">
+  <h2>Create Magic</h2>
+  <div class="form">
+    <%= render :partial => "form_new" %>
+
+  </div>
+</div>
+
+<div class="favourites">
+  <h3>Favourites</h3>
+  <% @current_user.favourites.each do |pm| %>
+    <div class="inspiration">
+      <p><%= pm.poem.title %><br>
+      <%= pm.poem.content %></p>
+      <div><%= link_to 'SHOW', poem_path(pm.poem.id) %></div>
+    </div>
+  <% end %>
+</div>
+</div>

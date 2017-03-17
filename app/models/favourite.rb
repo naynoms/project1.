@@ -13,7 +13,7 @@ class Favourite < ActiveRecord::Base
   belongs_to :user
   belongs_to :poem
 
-  # def does_user_already_likes_product
-  #   errors.add(:user, "You can like product only once.") if (user.already_likes?(product))
+  # def does_user_already_likes_poem
+  #   errors.add(:user, "Remove from favourites?") if (user.already_likes?(product))
   # end
 end

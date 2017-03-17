@@ -16,15 +16,12 @@
       <%= link_to "SIGN OUT #{@current_user.name}", login_path, :method => 'delete' %>
     <% else %>
       <%= link_to 'SIGN IN', login_path %>
+      <%= link_to 'SIGN UP', new_user_path %>
     <% end %>
   </nav>
+  <div class="container">
 
-
-
-
-
-
-<%= yield %>
-
+    <%= yield %>
+  </div>
 </body>
 </html>

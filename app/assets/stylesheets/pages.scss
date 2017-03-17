@@ -1,3 +1,69 @@
 // Place all the styles related to the Pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+* {
+  box-sizing: border-box;
+}
+body {
+  background-color: rgb(231, 244, 245);
+  color: rgb(0, 0, 139);
+}
+nav {
+  background-color: rgb(141, 224, 202);
+  color: rgb(130, 140, 236);
+
+}
+
+h1 {
+  color: rgb(94, 70, 139);
+
+}
+.container {
+  text-align: center;
+  margin: 0 auto;
+
+
+}
+.home {
+  display: inline-block;
+  margin: 0 auto;
+}
+.inspiration {
+  border: 3px solid rgb(158, 136, 204);
+  background-color: rgb(210, 201, 238);
+  display: inline-block;
+  margin: 10px auto;
+  width: 250px;
+  min-height: 200px;
+  justify-content: space-between;
+
+}
+.mypoems {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+
+
+}
+.poemform {
+  flex-grow: 1;
+}
+.poemColumn {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  flex-grow: 1;
+
+}
+
+.favourites {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+
+}
+.form {
+  border: 3px solid black;
+  min-width: 250px;
+  min-height: 200px;
+}
