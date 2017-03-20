@@ -5,6 +5,7 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <link href="https://fonts.googleapis.com/css?family=Cutive+Mono" rel="stylesheet">
 </head>
 <body>
 
@@ -13,12 +14,15 @@
     <%= link_to 'POEMS', poems_path %>
     <%= link_to 'CATEGORIES', categories_path %>
     <% if @current_user.present? %>
-      <%= link_to "SIGN OUT #{@current_user.name}", login_path, :method => 'delete' %>
+      <%= link_to "#{@current_user.name}" %>
+      <%= link_to "SIGN OUT", login_path, :method => 'delete' %>
     <% else %>
       <%= link_to 'SIGN IN', login_path %>
       <%= link_to 'SIGN UP', new_user_path %>
     <% end %>
   </nav>
+
+
   <div class="container">
 
     <%= yield %>
