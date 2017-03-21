@@ -4,14 +4,21 @@
   <p><%=flash[:error]%></p>
 <% end %>
 
+<div class="user_form">
+  <%= form_tag login_path, :class => 'login' do %>
+  <div class="form-group">
+    <%= label_tag 'Email' %>
+    <%= email_field_tag :email %>
+  </div>
 
-<%= form_tag login_path do %>
-  <%= label_tag 'Email' %>
-  <%= email_field_tag :email %>
-
+<div class="form-group">
   <%= label_tag 'Password' %>
   <%= password_field_tag :password %>
+</div>
 
-  <%= submit_tag 'LOGIN' %>
 
-<% end %>
+
+    <%= submit_tag 'LOGIN', :class => 'button' %>
+
+  <% end %>
+</div>

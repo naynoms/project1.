@@ -1,8 +1,9 @@
 <h2>Categories</h2>
 
-
-<% @categories.each do |cat| %>
-  <p><%= cat.name %><br>
-  <%= cat.description %></p>
-  <div><%= link_to 'SHOW', category_path(cat.id) %></div>
-<% end %>
+<div class="cats">
+  <% @categories.each do |cat| %>
+    <p><%= cat.name %><br>
+    <%= cat.description %></p>
+    <div><%= link_to 'SHOW', category_path(cat.id) %></div>
+  <% end %>
+</div>

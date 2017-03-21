@@ -2,7 +2,7 @@
 
 <div>
   <% if @current_user.present? %>
-    <%= link_to 'NEW POEM', new_poem_path %>
+    <%= link_to 'NEW POEM', my_poems_path %>
   <% else %>
   <p>
     <%= link_to 'SIGN IN', login_path %> or

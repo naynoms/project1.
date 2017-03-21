@@ -14,7 +14,7 @@
     <%= link_to 'POEMS', poems_path %>
     <%= link_to 'CATEGORIES', categories_path %>
     <% if @current_user.present? %>
-      <%= link_to "#{@current_user.name}" %>
+      <%= link_to "#{@current_user.name}", my_poems_path %>
       <%= link_to "SIGN OUT", login_path, :method => 'delete' %>
     <% else %>
       <%= link_to 'SIGN IN', login_path %>

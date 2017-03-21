@@ -35,6 +35,13 @@ h2 {
 h3 {
   font-size: 28px;
 }
+a{
+  color: rgb(0, 0, 139);
+
+}
+a:active {
+  color: rgb(0, 0, 139);
+}
 .container {
   text-align: center;
   margin: 0 auto;
@@ -64,12 +71,20 @@ h3 {
 }
 .poemform {
   flex-grow: 1;
+
+}
+.form {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-around;
 }
 .poemColumn {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   flex-grow: 1;
+  align-items: center;
 
 }
 
@@ -77,12 +92,31 @@ h3 {
   display: flex;
   flex-direction: column;
   flex-grow: 1;
+  align-items: center;
 
 }
 .form {
   border: 3px solid black;
-  min-width: 250px;
-  min-height: 200px;
+  min-width: 300px;
+  min-height: 300px;
+}
+form  {
+  display: table;
+  text-align: center;
+
+}
+// p     { display: table-row;  }
+label { display: table-cell; }
+input {
+  display: table-cell;
+  font-family: 'Cutive Mono', monospace;
+}
+// input[type:button]
+.button {
+  font-family: 'Cutive Mono', monospace;
+  background-color: rgb(210, 201, 238);
+  border: none;
+  margin: 3%;
 }
 
 .wrapper {
@@ -90,7 +124,25 @@ h3 {
   justify-content: flex-start;
   flex-wrap: wrap;
   margin: 10px 10px;
-  .inspiration {
-    width: 250px;
-  }
+  // .inspiration {
+  //   width: 250px;
+  // }
 }
+.user_form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.login {
+  max-width: 200px;
+}
+.content {
+  min-height: 100px;
+}
+textarea, select {
+  font-family: 'Cutive Mono', monospace;
+}
+// .cats {
+//   text-align: center;
+// }
